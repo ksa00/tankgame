@@ -3,7 +3,7 @@
 
 //コンストラクタ
 Ground::Ground(GameObject* parent)
-	: GameObject(parent, "PlayScene"), hmodel(-1)
+	: GameObject(parent, "Ground"), hmodel(-1)
 {
 }
 
