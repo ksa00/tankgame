@@ -2,6 +2,7 @@
 #include"Engine/Model.h"
 #include"Engine/Input.h"
 #include"Ground.h"
+#include"TankHead.h"
 
 //コンストラクタ
 Tank::Tank(GameObject* parent)
@@ -12,8 +13,10 @@ Tank::Tank(GameObject* parent)
 //初期化
 void Tank::Initialize()
 {
+	
 	hmodel = Model::Load("Model/tankbody.fbx");
 	assert(hmodel >= 0);
+	Instantiate<TankHead>(this);
 }
 
 //更新

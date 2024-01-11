@@ -2,6 +2,7 @@
 #include"Engine/Model.h"
 #include"Ground.h"
 #include"Tank.h"
+//#include"TankHead.h"
 
 //コンストラクタ
 PlayScene::PlayScene(GameObject* parent)
@@ -14,6 +15,7 @@ void PlayScene::Initialize()
 {
 	Instantiate<Ground>(this);
 	Instantiate<Tank>(this);
+//	
 }
 
 //更新

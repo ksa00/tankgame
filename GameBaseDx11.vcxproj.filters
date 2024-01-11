@@ -116,6 +116,10 @@
     <ClCompile Include="Tank.cpp">
       <Filter>Scenes\Play</Filter>
     </ClCompile>
+    <ClCompile Include="TankHead.cpp">
+      <Filter>Scenes\Play</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\BoxCollider.h">
@@ -199,6 +203,10 @@
     <ClInclude Include="Tank.h">
       <Filter>Scenes\Play</Filter>
     </ClInclude>
+    <ClInclude Include="TankHead.h">
+      <Filter>Scenes\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Assets\Shader\Simple2D.hlsl">
