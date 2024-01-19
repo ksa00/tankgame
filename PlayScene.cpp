@@ -2,6 +2,7 @@
 #include"Engine/Model.h"
 #include"Ground.h"
 #include"Tank.h"
+#include"Enemy.h"
 //#include"TankHead.h"
 
 //コンストラクタ
@@ -15,6 +16,7 @@ void PlayScene::Initialize()
 {
 	Instantiate<Ground>(this);
 	Instantiate<Tank>(this);
+	Instantiate<Enemy>(this);
 //	
 }
 

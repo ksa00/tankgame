@@ -41,9 +41,9 @@ void TankHead::Update()
 		XMStoreFloat3(&vmove, moveDir);
 
 		Bullet* pBullet=Instantiate<Bullet>(this->GetParent()->GetParent());
-		pBullet->SetPosition(CanonRootpos);
+		pBullet->SetPosition(CanonToppos);
 		pBullet->SetMoveDir(vmove);
-		pBullet->setSpeed(0.2);
+		pBullet->setSpeed(0.25);
 	}
 }
 
