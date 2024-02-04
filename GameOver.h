@@ -1,14 +1,13 @@
 #pragma once
 #include "Engine/GameObject.h"
-
 //テストシーンを管理するクラス
-class TitleScene : public GameObject
+class GameOver : public GameObject
 {
-	int hTitle;
+	int hGameOver;
 public:
 	//コンストラクタ
 	//引数：parent  親オブジェクト（SceneManager）
-	TitleScene(GameObject* parent);
+	GameOver(GameObject* parent);
 
 	//初期化
 	void Initialize() override;
@@ -22,3 +21,4 @@ public:
 	//開放
 	void Release() override;
 };
+

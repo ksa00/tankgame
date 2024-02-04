@@ -27,11 +27,14 @@
     <Filter Include="Scenes">
       <UniqueIdentifier>{ad16ade8-bdba-40c0-9ede-e72cf4743586}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scenes\Title">
+      <UniqueIdentifier>{332a51d4-f679-414c-a851-df226b373e38}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Scenes\Play">
       <UniqueIdentifier>{83426dd3-e604-4482-a3df-c20940daa57d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Scenes\Title">
-      <UniqueIdentifier>{332a51d4-f679-414c-a851-df226b373e38}</UniqueIdentifier>
+    <Filter Include="Scenes\GameOver">
+      <UniqueIdentifier>{8c9417f9-46dd-44b3-969b-5ba2dec8446e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +128,12 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>Scenes\Play</Filter>
     </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>Scenes\Play</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>Scenes\GameOver</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\BoxCollider.h">
@@ -216,6 +225,12 @@
     </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Scenes\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.h">
+      <Filter>Scenes\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>Scenes\GameOver</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,12 +1,17 @@
 #pragma once
 #include "Engine/GameObject.h"
 #include"Engine//Model.h"
+class HUD;
+
+class PlayScene;
 class Bullet :
     public GameObject
 {
+	HUD* hud;
 	int hmodel;
 	float bulletSpeed_;
 	XMFLOAT3 moveDir_;
+	PlayScene* playscene_;
 public:
 	//コンストラクタ
 	//引数：parent  親オブジェクト（SceneManager）
@@ -26,5 +31,6 @@ public:
 	void Release() override;
 	void SetMoveDir(XMFLOAT3 move) { moveDir_ = move; }
 	void setSpeed(float speed) { bulletSpeed_ = speed; }
+	void OnCollision (GameObject* pTarget) override;
 };
 

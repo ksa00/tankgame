@@ -1,21 +1,23 @@
 #include "TitleScene.h"
 #include "Engine/SceneManager.h"
-
+#include "Engine/Image.h"
 #include "Engine/Input.h"
 
 
-//ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//Æ’RÆ’â€œÆ’XÆ’gÆ’â€°Æ’NÆ’^
 TitleScene::TitleScene(GameObject * parent)
-	: GameObject(parent, "TitleScene")
+	: GameObject(parent, "TitleScene"),hTitle(-1)
 {
 }
 
-//‰Šú‰»
+//Ââ€°Å Ãºâ€°Â»
 void TitleScene::Initialize()
 {
+	hTitle = Image::Load("Image/Title.png");//MEMO::å…ˆç”ŸãŒä½œã£ãŸç”»åƒã‚’ä½¿ã£æ‰‹ç”³ã—è¨³ãªã„ã§ã™..
+	assert(hTitle >= 0);
 }
 
-//XV
+//ÂXÂV
 void TitleScene::Update()
 {
 	if (Input::IsKeyDown(DIK_RETURN)) {
@@ -24,12 +26,14 @@ void TitleScene::Update()
 	}
 }
 
-//•`‰æ
+//â€¢`â€°Ã¦
 void TitleScene::Draw()
 {
+	Image::SetTransform(hTitle, transform_);
+	Image::Draw(hTitle);
 }
 
-//ŠJ•ú
+//Å Jâ€¢Ãº
 void TitleScene::Release()
 {
 }
