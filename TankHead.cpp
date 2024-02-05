@@ -22,16 +22,16 @@ void TankHead::Update()
 {
 	if (Input::IsKey(DIK_LEFT))
 	{
-		this->transform_.rotate_.y -= 1.5;
+		this->transform_.rotate_.y -= 4.0;
 	}
 
 	if (Input::IsKey(DIK_RIGHT))
 	{
-		this->transform_.rotate_.y += 1.5;
+		this->transform_.rotate_.y += 4.0;
 	}
 	if (Input::IsKeyDown(DIK_SPACE)) {
-		XMFLOAT3 CanonToppos =Model::GetBonePosition(hmodel,"CanonHole");
-		XMFLOAT3 CanonRootpos = Model::GetBonePosition(hmodel, "CanonRoot");
+		XMFLOAT3 CanonToppos =Model::GetBonePosition(hmodel,"CannonPos");
+		XMFLOAT3 CanonRootpos = Model::GetBonePosition(hmodel, "CannonRoot");
 		XMVECTOR moveDir;
 		XMVECTOR vtop = XMLoadFloat3(&CanonToppos);
 		XMVECTOR vroot = XMLoadFloat3(&CanonRootpos);
@@ -43,7 +43,7 @@ void TankHead::Update()
 		Bullet* pBullet=Instantiate<Bullet>(this->GetParent()->GetParent());
 		pBullet->SetPosition(CanonToppos);
 		pBullet->SetMoveDir(vmove);
-		pBullet->setSpeed(0.15);
+		pBullet->setSpeed(0.175);
 	}
 }
 

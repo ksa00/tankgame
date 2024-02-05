@@ -1,12 +1,11 @@
 #pragma once
 #include "Engine/GameObject.h"
-class Text;
+
 class Tank;
 
 //テストシーンを管理するクラス
 class PlayScene : public GameObject
 {
-	Text* pText;
 	Tank* player;
 	int enemynum;
 public:

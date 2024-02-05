@@ -1,6 +1,5 @@
 #include "PlayScene.h"
 #include"Engine/Model.h"
-#include"Engine/Text.h"
 #include"Engine/Camera.h"
 #include"Ground.h"
 #include"Tank.h"
@@ -9,11 +8,11 @@
 #include"Engine/SceneManager.h"
 //#include"TankHead.h"
 namespace {
-	const int EnemyNum{ 17 };
+	const int EnemyNum{ 14 };
 }
 //コンストラクタ
 PlayScene::PlayScene(GameObject* parent)
-	: GameObject(parent, "PlayScene"),pText(nullptr)
+	: GameObject(parent, "PlayScene")
 {
 }
 
@@ -31,8 +30,7 @@ void PlayScene::Initialize()
 	for(int i=0;i<enemynum;i++)
 	Instantiate<Enemy>(this);
 
-	pText = new Text;
-	pText->Initialize();
+
 	Instantiate<HUD>(this);
 }
 
@@ -48,6 +46,7 @@ void PlayScene::Update()
 //描画
 void PlayScene::Draw()
 {
+	
 }
 
 //開放
