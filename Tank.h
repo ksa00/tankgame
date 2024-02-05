@@ -5,6 +5,7 @@ class Tank : public GameObject
 {
 public:
 	int hmodel;
+	int camState_;
 	XMVECTOR front;
 	float speed_;
 	//コンストラクタ

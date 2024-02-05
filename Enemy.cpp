@@ -27,6 +27,7 @@ void Enemy::Initialize()
 	transform_.position_.z = 25.0 * (z - 1.0);//25*(-1.0-1.0)random numbers
 	transform_.position_.y = 0;
 
+	//placing enemy on ground
 	Ground* ptrground = (Ground*)FindObject("Ground");
 	int hGmodel = ptrground->GetModelHandle();
 	RayCastData data;

@@ -2,10 +2,7 @@
 #include "Engine/GameObject.h"
 #include <vector>
 #include <string>
-
 using std::string;
-
-
 class HUD :
 	public GameObject
 {
@@ -16,11 +13,9 @@ public:
 	HUD(GameObject* parent);
 	int hHUD_;//c‚èZZ‹@‚Ì‰æ‘œ
 	int hNumbers_;//”š‚Ì‰æ‘œ
-	//int hKinoko_;
+	
 	Transform tHud_;
-	//Transform tKinoko_;
 	std::vector<Transform> tNumbers_;
-	//Transform tNumbers[3];
 	//‰Šú‰»
 	void Initialize() override;
 

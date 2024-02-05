@@ -1,13 +1,10 @@
 #pragma once
 #include "Engine/GameObject.h"
 #include"Engine//Model.h"
-class HUD;
-
 class PlayScene;
 class Bullet :
     public GameObject
 {
-	HUD* hud;
 	int hmodel;
 	float bulletSpeed_;
 	XMFLOAT3 moveDir_;
@@ -17,7 +14,6 @@ public:
 	//引数：parent  親オブジェクト（SceneManager）
 	Bullet(GameObject* parent);
 	~Bullet();
-
 	//初期化
 	void Initialize() override;
 

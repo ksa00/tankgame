@@ -9,7 +9,7 @@
 #include"Engine/SceneManager.h"
 //#include"TankHead.h"
 namespace {
-	const int EnemyNum{ 8 };
+	const int EnemyNum{ 17 };
 }
 //コンストラクタ
 PlayScene::PlayScene(GameObject* parent)
@@ -39,12 +39,6 @@ void PlayScene::Initialize()
 //更新
 void PlayScene::Update()
 {
-	//moving camera along with tank
-	//Camera::SetTarget(player->GetPosition());
-	//XMFLOAT3 camPos = player->GetPosition();
-	//camPos.y += 8;
-	//camPos.z -= 15;
-	//Camera::SetPosition(camPos);
 	if (FindObject("Enemy") == nullptr) {
 		SceneManager* pSceneManager = (SceneManager*)FindObject("SceneManager");
 		pSceneManager->ChangeScene(SCENE_ID_GAMEOVER);
@@ -54,7 +48,6 @@ void PlayScene::Update()
 //描画
 void PlayScene::Draw()
 {
-	//pText->Draw(30, 30, "HAROOO!!");
 }
 
 //開放

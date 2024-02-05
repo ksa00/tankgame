@@ -4,7 +4,7 @@
 #include"PlayScene.h"
 #include"Engine/Debug.h"
 Bullet::Bullet(GameObject* parent)
-	:GameObject(parent,"Bullet"),hmodel(-1),hud(nullptr)
+	:GameObject(parent,"Bullet"),hmodel(-1)
 {
 }
 
@@ -16,8 +16,6 @@ void Bullet::Initialize()
 {
 	hmodel = Model::Load("Model/Bullet.fbx");
 	assert(hmodel >= 0);
-
-
 	SphereCollider* collider = new SphereCollider(XMFLOAT3(0, 0, 0), 1.2f);
 	AddCollider(collider);
 	playscene_ = (PlayScene*)GetParent();
@@ -31,6 +29,7 @@ void Bullet::Update()
 	moveDir_ = { moveDir_.x,moveDir_.y - 0.01f,moveDir_.z };
 	if (transform_.position_.y < -10)
 		KillMe();
+
 }
 
 void Bullet::Draw()
@@ -48,10 +47,8 @@ void Bullet::OnCollision(GameObject* pTarget)
 	if (pTarget->GetObjectName() == "Enemy") {
 		playscene_->DescEnemy();
 		pTarget->KillMe();
-		hud = (HUD*)FindObject("HUD");
-		if (playscene_->isEnemyleft() ) {
-			playscene_->DescEnemy();
-		}
+			
+		
 	}
 	this->KillMe();
 }
